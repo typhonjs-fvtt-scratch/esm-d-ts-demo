@@ -1,0 +1,8 @@
+.idea
+.DS_Store
+npm-debug.log
+.dts/
+coverage/
+debug/
+docs/
+node_modules/

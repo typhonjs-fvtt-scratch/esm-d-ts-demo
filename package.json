@@ -1,0 +1,19 @@
+{
+  "name": "esm-d-ts-demo",
+  "version": "0.0.0",
+  "description": "Provides a demo of esm-d-ts.",
+  "type": "module",
+  "author": "Michael Leahy <support@typhonjs.io> (https://github.com/typhonrt)",
+  "contributors": [
+    "Michael Leahy <support@typhonjs.io> (https://github.com/typhonrt)"
+  ],
+  "sideEffects": false,
+  "private": true,
+  "devDependencies": {
+    "@typhonjs-build-test/esm-d-ts": "^0.1.0"
+  },
+  "scripts": {
+    "types": "esm-d-ts g src/mjs/index.mjs && esm-d-ts g src/js/index.js"
+  },
+  "license": "MIT"
+}
