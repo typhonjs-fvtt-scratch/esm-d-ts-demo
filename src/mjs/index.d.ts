@@ -5,14 +5,14 @@ declare class SchemaField {
 type DataFieldOptions = number;
 type FilePathFieldOptions = number;
 
-/** @type {import("./fields").DataFieldOptions} */
-declare const x: any;
+/** @type {import("./fields.mjs").DataFieldOptions} */
+declare const x: DataFieldOptions;
 declare class TextureData {
     /**
-     * @param {import("./fields").DataFieldOptions} options  Options which are forwarded to the SchemaField constructor
-     * @param {import("./fields").FilePathFieldOptions} srcOptions Additional options for the src field
+     * @param {import("./fields.mjs").DataFieldOptions} options  Options which are forwarded to the SchemaField constructor
+     * @param {import("./fields.mjs").FilePathFieldOptions} srcOptions Additional options for the src field
      */
-    constructor(options: any, { categories, initial, wildcard, label }: any);
+    constructor(options: DataFieldOptions, { categories, initial, wildcard, label }: FilePathFieldOptions);
 }
 
 export { DataFieldOptions, FilePathFieldOptions, SchemaField, TextureData, x };
