@@ -1,12 +1,12 @@
 This is a demo package showing configuration of [esm-d-ts](https://www.npmjs.com/package/@typhonjs-build-test/esm-d-ts)
 to generate types from ESM source code.
 
-This trial shows that Typescript currently requires `.mjs` files when using `import types` to include the extension
-`.mjs`. For example [see here](https://github.com/typhonjs-fvtt-scratch/esm-d-ts-demo/blob/main/src/mjs/textureData.mjs#L8-L9) 
+You can see the bundled types output here:
 
-You can see the output of type generation as follows between `.js` and `.mjs` files here:
+- [.types/index.d.ts](https://github.com/typhonjs-fvtt-scratch/esm-d-ts-demo/blob/main/.types/index.d.ts)
 
-- [src/js/index.d.ts](https://github.com/typhonjs-fvtt-scratch/esm-d-ts-demo/blob/main/src/js/index.d.ts)
-- [src/mjs/index.d.ts](https://github.com/typhonjs-fvtt-scratch/esm-d-ts-demo/blob/main/src/mjs/index.d.ts)
+`esm-d-ts` is configured as a NPM script here in [package.json](https://github.com/typhonjs-fvtt-scratch/esm-d-ts-demo/blob/main/package.json#L19)
 
-`esm-d-ts` is configured as a NPM script here in [package.json](https://github.com/typhonjs-fvtt-scratch/esm-d-ts-demo/blob/main/package.json#L16)
+TypeDoc is also configured to generate API docs from the bundled types instead of JS source files. You can review
+the `typedoc.json` for setup. [@typhonjs-typedoc/ts-lib-docs](https://www.npmjs.com/package/@typhonjs-typedoc/ts-lib-docs) Typedoc
+plugins are configured to link all TS built-in libs to create full end-to-end API docs.
