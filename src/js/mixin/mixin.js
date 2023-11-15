@@ -29,7 +29,7 @@ export function mixin(BaseClass)
  *
  * for:
  *
- * `@returns {BaseClass & new (...args: any[]) => MyMixin} The mixed class.`
+ * `@returns {T & new (...args: any[]) => MyMixin} The mixed class.`
  *
  * and uncomment the typedef below and comment out the interface definition in `./types.ts`
  */
