@@ -3,23 +3,83 @@
  */
 declare class Base {
     /**
+     * Required parameters.
+     *
      * @param {number}   one - First parameter
      *
      * @param {string}   two - Second parameter
      *
      * @param {boolean}  three - Third parameter
      */
-    thing(one: number, two: string, three: boolean): void;
+    foo(one: number, two: string, three: boolean): void;
+    /**
+     * Required object parameters.
+     *
+     * @param options - options
+     *
+     * @param {number}   options.one - First parameter
+     *
+     * @param {string}   options.two - Second parameter
+     *
+     * @param {boolean}  options.three - Third parameter
+     */
+    bar({ one, two, three }: {
+        one: any;
+        two: any;
+        three: any;
+    }): void;
+    /**
+     * Optional object parameters.
+     *
+     * @param [options] - options
+     *
+     * @param {number}   [options.one] - First parameter
+     *
+     * @param {string}   [options.two] - Second parameter
+     *
+     * @param {boolean}  [options.three] - Third parameter
+     */
+    bang({ one, two, three }?: {
+        one: any;
+        two: any;
+        three: any;
+    }): void;
+}
+
+/**
+ * @inheritDoc
+ */
+declare class Inherited1_A extends Base {
+    /**
+     * @inheritDoc
+     */
+    foo(one: any, two: any, three: any): void;
+    /**
+     * @inheritDoc
+     */
+    bar({ one, two, three }: {
+        one: any;
+        two: any;
+        three: any;
+    }): void;
 }
 
 /**
  * @inheritdoc
  */
-declare class Inherited extends Base {
+declare class Inherited1_B extends Base {
     /**
      * @inheritdoc
      */
-    thing(one: any, two: any, three: any): void;
+    foo(one: any, two: any, three: any): void;
+    /**
+     * @inheritdoc
+     */
+    bar({ one, two, three }: {
+        one: any;
+        two: any;
+        three: any;
+    }): void;
 }
 
 /** @typedef {number} DataFieldOptions */
@@ -100,4 +160,4 @@ declare class TextureData {
     loadTexture(): Promise<[HTMLDivElement]>;
 }
 
-export { A, B, Base, DataFieldOptions, FilePathFieldOptions, Inherited, MyMixin, SchemaField, TextureData, mixin, x };
+export { A, B, Base, DataFieldOptions, FilePathFieldOptions, Inherited1_A, Inherited1_B, MyMixin, SchemaField, TextureData, mixin, x };
