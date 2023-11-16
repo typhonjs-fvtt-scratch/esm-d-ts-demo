@@ -1,3 +1,27 @@
+/**
+ * A base class to test `inheritDoc`.
+ */
+declare class Base {
+    /**
+     * @param {number}   one - First parameter
+     *
+     * @param {string}   two - Second parameter
+     *
+     * @param {boolean}  three - Third parameter
+     */
+    thing(one: number, two: string, three: boolean): void;
+}
+
+/**
+ * @inheritDoc
+ */
+declare class Inherited extends Base {
+    /**
+     * @inheritDoc
+     */
+    thing(one: any, two: any, three: any): void;
+}
+
 /** @typedef {number} DataFieldOptions */
 /** @typedef {number} FilePathFieldOptions */
 declare class SchemaField {
@@ -76,4 +100,4 @@ declare class TextureData {
     loadTexture(): Promise<[HTMLDivElement]>;
 }
 
-export { A, B, DataFieldOptions, FilePathFieldOptions, MyMixin, SchemaField, TextureData, mixin, x };
+export { A, B, Base, DataFieldOptions, FilePathFieldOptions, Inherited, MyMixin, SchemaField, TextureData, mixin, x };
