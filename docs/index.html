@@ -1,0 +1,29 @@
+
+<html>
+<head>
+    <title>esm-d-ts (post processing)</title>
+    <style>
+        a, p {
+            color: white;
+        }
+        body {
+            background: #333333;
+        }
+    </style>
+</head>
+<body>
+   <p>
+       esm-d-ts creates bundled type declarations and provides expanded functionality to handle edge cases that are
+       difficult when generating types from ES Module projects. This demo shows an experimental new feature to handle the
+       corner case of `@inheritDoc`. TS by default does not provide types for constructor and method parameters that
+       use `@inheritDoc`.
+   </p>
+   <p>
+       The "Mainline" link is with no post processing and shows the issue. Review the Base through PartialInherited2_A
+       classes. The "With Postprocessing" handles `@inheritDoc` and promotes the types of the parent to child classes.
+   </p>
+   <a href="./main">Mainline (No post processing)</a>
+   <p>
+   <a href="./post">With Postprocessing</a>
+</body>
+</html>
