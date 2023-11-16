@@ -17,6 +17,11 @@ export function mixin(BaseClass)
       {
          return n + 1;
       }
+
+      addTwo(n)
+      {
+         return n + 2;
+      }
    };
 }
 

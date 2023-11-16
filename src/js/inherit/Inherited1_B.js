@@ -8,6 +8,14 @@ export class Inherited1_B extends Base
    /**
     * @inheritdoc
     */
+   constructor(options)
+   {
+      super(options);
+   }
+
+   /**
+    * @inheritdoc
+    */
    foo(one, two, three)
    {
       super.foo(one, two, three);
@@ -16,16 +24,32 @@ export class Inherited1_B extends Base
    /**
     * @inheritdoc
     */
-   bar({ one, two, three })
+   bar(options)
    {
-      super.foo({ one, two, three });
+      return super.bar(options);
    }
 
    /**
     * @inheritdoc
     */
-   bang({ one, two, three } = {})
+   zap({ one, two, three })
    {
-      super.bang({ one, two });
+      return super.zap({ one, two, three });
+   }
+
+   /**
+    * @inheritdoc
+    */
+   bang(options)
+   {
+      return super.bang(options);
+   }
+
+   /**
+    * @inheritdoc
+    */
+   boom(options)
+   {
+      return super.boom(options);
    }
 }

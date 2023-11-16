@@ -10,14 +10,15 @@
   "sideEffects": false,
   "private": true,
   "devDependencies": {
-    "@typhonjs-build-test/esm-d-ts": "^0.1.0",
+    "@typhonjs-build-test/esm-d-ts": "github:@typhonjs-node-build-test/esm-d-ts#dev-0.2",
     "@typhonjs-typedoc/typedoc-theme-dmt": "0.0.0",
     "@typhonjs-typedoc/ts-lib-docs": "2023.7.12",
     "typedoc": "0.24.8"
   },
   "scripts": {
-    "types": "esm-d-ts g src/js/index.js -o .types/index.d.ts",
-    "docs": "typedoc"
+    "types": "esm-d-ts gen -c",
+    "docs-main": "typedoc --tsconfig ./config/main/tsconfig.json --options ./config/main/typedoc.json",
+    "docs-post": "typedoc --tsconfig ./config/post/tsconfig.json --options ./config/post/typedoc.json"
   },
   "license": "MIT"
 }

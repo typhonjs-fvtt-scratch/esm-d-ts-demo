@@ -112,35 +112,27 @@ declare class Inherited1_A extends Base {
     /**
      * @inheritDoc
      */
-    constructor(options: any);
+    constructor(options: { one?: boolean; two?: string; three?: number; });
     /**
      * @inheritDoc
      */
-    foo(one: any, two: any, three: any): void;
+    foo(one: number, two: string, three: boolean): void;
     /**
      * @inheritDoc
      */
-    bar(options: any): boolean;
+    bar(options: { one: number; two: string; three: boolean; }): boolean;
     /**
      * @inheritDoc
      */
-    zap({ one, two, three }: {
-        one: any;
-        two: any;
-        three: any;
-    }): boolean;
+    zap({ one, two, three }: { one: number; two: string; three: boolean; }): boolean;
     /**
      * @inheritDoc
      */
-    bang({ one, two, three }?: {
-        one: any;
-        two: any;
-        three: any;
-    }): string;
+    bang({ one, two, three }?: { one?: number; two?: string; three?: boolean; }): string;
     /**
      * @inheritDoc
      */
-    boom(options: any): {
+    boom(options: { one?: number; two?: string; three?: boolean; }): {
         foo: boolean;
         bar: boolean;
     };
@@ -153,31 +145,27 @@ declare class Inherited1_B extends Base {
     /**
      * @inheritdoc
      */
-    constructor(options: any);
+    constructor(options: { one?: boolean; two?: string; three?: number; });
     /**
      * @inheritdoc
      */
-    foo(one: any, two: any, three: any): void;
+    foo(one: number, two: string, three: boolean): void;
     /**
      * @inheritdoc
      */
-    bar(options: any): boolean;
+    bar(options: { one: number; two: string; three: boolean; }): boolean;
     /**
      * @inheritdoc
      */
-    zap({ one, two, three }: {
-        one: any;
-        two: any;
-        three: any;
-    }): boolean;
+    zap({ one, two, three }: { one: number; two: string; three: boolean; }): boolean;
     /**
      * @inheritdoc
      */
-    bang(options: any): string;
+    bang(options: { one?: number; two?: string; three?: boolean; }): string;
     /**
      * @inheritdoc
      */
-    boom(options: any): {
+    boom(options: { one?: number; two?: string; three?: boolean; }): {
         foo: boolean;
         bar: boolean;
     };
@@ -192,27 +180,19 @@ declare class Inherited2_A extends Inherited1_A {
     /**
      * @inheritDoc
      */
-    constructor({ one, two, three }: {
-        one: any;
-        two: any;
-        three: any;
-    });
+    constructor({ one, two, three }: { one?: boolean; two?: string; three?: number; });
     /**
      * Change signature
      *
      * @inheritDoc
      */
-    bang(options: any): string;
+    bang(options: { one?: number; two?: string; three?: boolean; }): string;
     /**
      * Change signature
      *
      * @inheritDoc
      */
-    boom({ one, two, three }?: {
-        one: any;
-        two: any;
-        three: any;
-    }): {
+    boom({ one, two, three }?: { one?: number; two?: string; three?: boolean; }): {
         foo: boolean;
         bar: boolean;
     };
@@ -225,11 +205,11 @@ declare class PartialInherited1_A extends Base {
     /**
      * @inheritDoc
      */
-    foo(one: any, two: any, three: any): void;
+    foo(one: number, two: string, three: boolean): void;
     /**
      * @inheritDoc
      */
-    bar(options: any): boolean;
+    bar(options: { one: number; two: string; three: boolean; }): boolean;
 }
 
 /**
@@ -239,23 +219,19 @@ declare class PartialInherited2_A extends PartialInherited1_A {
     /**
      * @inheritDoc
      */
-    constructor(options: any);
+    constructor(options: { one?: boolean; two?: string; three?: number; });
     /**
      * @inheritDoc
      */
-    zap({ one, two, three }: {
-        one: any;
-        two: any;
-        three: any;
-    }): boolean;
+    zap({ one, two, three }: { one: number; two: string; three: boolean; }): boolean;
     /**
      * @inheritDoc
      */
-    bang(options: any): string;
+    bang(options: { one?: number; two?: string; three?: boolean; }): string;
     /**
      * @inheritDoc
      */
-    boom(options: any): {
+    boom(options: { one?: number; two?: string; three?: boolean; }): {
         foo: boolean;
         bar: boolean;
     };

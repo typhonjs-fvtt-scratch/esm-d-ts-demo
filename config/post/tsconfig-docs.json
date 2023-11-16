@@ -9,6 +9,6 @@
   },
 
   "include" : [
-    "./.types/index.d.ts"
+    "../../.types/index-post.d.ts"
   ]
 }

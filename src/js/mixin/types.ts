@@ -3,7 +3,7 @@
  * construct / impossible w/ JSDoc. You can still reference these declarations using `import types` in JSDoc.
  */
 
-declare interface MyMixin
+declare interface BaseMixin
 {
    /**
     * Add one to the provided number.
@@ -15,4 +15,16 @@ declare interface MyMixin
    addOne(n: number): number;
 }
 
-export { MyMixin }
+declare interface MyMixin extends BaseMixin
+{
+   /**
+    * Add two to the provided number.
+    *
+    * @param {number} n - The number to increment.
+    *
+    * @returns {number} - The incremented number.
+    */
+   addTwo(n: number): number;
+}
+
+export { BaseMixin, MyMixin }

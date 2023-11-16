@@ -1,9 +1,9 @@
-import { Base } from './Base.js';
+import { PartialInherited1_A } from './PartialInherited1_A.js';
 
 /**
  * @inheritDoc
  */
-export class Inherited1_A extends Base
+export class PartialInherited2_A extends PartialInherited1_A
 {
    /**
     * @inheritDoc
@@ -11,22 +11,6 @@ export class Inherited1_A extends Base
    constructor(options)
    {
       super(options);
-   }
-
-   /**
-    * @inheritDoc
-    */
-   foo(one, two, three)
-   {
-      super.foo(one, two, three);
-   }
-
-   /**
-    * @inheritDoc
-    */
-   bar(options)
-   {
-      return super.bar(options);
    }
 
    /**
@@ -40,9 +24,9 @@ export class Inherited1_A extends Base
    /**
     * @inheritDoc
     */
-   bang({ one, two, three } = {})
+   bang(options)
    {
-      return super.bang({ one, two, three });
+      return super.bang(options);
    }
 
    /**
