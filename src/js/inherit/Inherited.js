@@ -1,13 +1,12 @@
 import { Base } from './Base.js';
 
 /**
- * @inheritDoc
+ * @inheritdoc
  */
 export class Inherited extends Base
 {
-
    /**
-    * @inheritDoc
+    * @inheritdoc
     */
    thing(one, two, three)
    {

@@ -1,5 +1,5 @@
 /**
- * A base class to test `inheritDoc`.
+ * A base class to test `inheritdoc`.
  */
 declare class Base {
     /**
@@ -13,11 +13,11 @@ declare class Base {
 }
 
 /**
- * @inheritDoc
+ * @inheritdoc
  */
 declare class Inherited extends Base {
     /**
-     * @inheritDoc
+     * @inheritdoc
      */
     thing(one: any, two: any, three: any): void;
 }

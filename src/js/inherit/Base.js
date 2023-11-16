@@ -1,5 +1,5 @@
 /**
- * A base class to test `inheritDoc`.
+ * A base class to test `inheritdoc`.
  */
 export class Base
 {
