@@ -10,7 +10,7 @@
   "sideEffects": false,
   "private": true,
   "devDependencies": {
-    "@typhonjs-build-test/esm-d-ts": "github:@typhonjs-node-build-test/esm-d-ts#dev-0.2",
+    "@typhonjs-build-test/esm-d-ts": "^0.2.0-next.1",
     "@typhonjs-typedoc/typedoc-theme-dmt": "0.0.0",
     "@typhonjs-typedoc/ts-lib-docs": "2023.7.12",
     "typedoc": "0.24.8"
